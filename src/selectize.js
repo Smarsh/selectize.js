@@ -584,7 +584,7 @@ $.extend(Selectize.prototype, {
 		if (self.loadedSearches.hasOwnProperty(value)) return;
 		self.loadedSearches[value] = true;
 		self.load(function(callback) {
-			fn.apply(self, [value, callback]);
+			fn.apply(self, [{value, callback},{}]);
 		});
 	},
 
